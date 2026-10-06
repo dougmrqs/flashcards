@@ -1,5 +1,7 @@
 # 🃏 Dev Flash Cards
 
+**▶ Play it at [dougmrqs.github.io/flashcards](https://dougmrqs.github.io/flashcards/)**
+
 Flash cards that help developers find the gaps in what they know. Click a deck to draw a card; it flips over in the middle of the screen. Decide whether you could explain the title, then reveal the answer. Click outside to discard it. Every deck shares one discard pile, and clicking the pile lays those cards out in a carousel so you can go back to the fuzzy ones and look them up.
 
 It's a static Svelte 5 + Vite app hosted on GitHub Pages. There's no backend and nothing is stored.
