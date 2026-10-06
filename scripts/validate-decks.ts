@@ -40,7 +40,7 @@ for (const file of readdirSync(DECKS_DIR).filter((f) => f.endsWith('.md')).sort(
   }
 
   total += deck.cards.length;
-  console.log(`  ${deck.icon}  ${deck.title.padEnd(16)} ${deck.cards.length} cards`);
+  console.log(`  ${deck.icon}  ${deck.title.padEnd(22)} ${deck.cards.length} cards`);
 }
 
 if (errors.length) {
