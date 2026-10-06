@@ -1,0 +1,141 @@
+:root {
+  color-scheme: light dark;
+
+  --bg: #f6f5f1;
+  --surface: #ffffff;
+  --surface-2: #f0eee8;
+  --border: #e2dfd6;
+  --text: #1d1b16;
+  --text-muted: #5f5b51;
+  --text-faint: #8a857a;
+  --accent: #5b5bd6;
+  --accent-hover: #4b4bc4;
+  --accent-text: #4a4ac0;
+  --on-accent: #ffffff;
+  --code-bg: rgba(91, 91, 214, 0.09);
+  --stripe: rgba(91, 91, 214, 0.06);
+  --shadow-sm: 0 1px 2px rgba(29, 27, 22, 0.06);
+  --shadow-md: 0 6px 24px -8px rgba(29, 27, 22, 0.18);
+
+  --radius: 12px;
+  --card-radius: 12px;
+  --hue-text-l: 36%;
+  --backdrop: rgb(16 14 24 / 0.55);
+  --shadow-lg: 0 24px 60px -12px rgba(29, 27, 22, 0.45);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131318;
+    --surface: #1c1c23;
+    --surface-2: #24242d;
+    --border: #33333f;
+    --text: #ececf1;
+    --text-muted: #a9a9b8;
+    --text-faint: #7c7c8c;
+    --accent: #8b8bf5;
+    --accent-hover: #a0a0ff;
+    --accent-text: #a5a5ff;
+    --on-accent: #131318;
+    --code-bg: rgba(139, 139, 245, 0.14);
+    --stripe: rgba(139, 139, 245, 0.07);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 8px 28px -10px rgba(0, 0, 0, 0.7);
+    --shadow-lg: 0 24px 60px -12px rgba(0, 0, 0, 0.8);
+    --hue-text-l: 72%;
+    --backdrop: rgb(4 4 10 / 0.7);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+.button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button.primary,
+button.ghost,
+a.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition:
+    background 140ms ease,
+    border-color 140ms ease;
+}
+
+button.primary {
+  background: var(--accent);
+  color: var(--on-accent);
+  border: 1px solid transparent;
+}
+
+button.primary:hover {
+  background: var(--accent-hover);
+}
+
+button.ghost,
+a.ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+button.ghost:hover:not(:disabled),
+a.ghost:hover {
+  border-color: var(--accent);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+kbd {
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  padding: 1px 6px;
+  border: 1px solid var(--border);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  background: var(--surface);
+}
+
+/* Inline code inside card titles. */
+h2 code,
+.title code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.05em 0.3em;
+  border-radius: 5px;
+  background: var(--code-bg);
+}
